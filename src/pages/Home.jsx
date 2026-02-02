@@ -2,6 +2,7 @@ import CoinCard from "../components/CoinCard.jsx";
 import LimitSelector from "../components/LimitSelector.jsx";
 import FilterInput from "../components/FilterInput.jsx";
 import SortSelector from "../components/SortSelector.jsx";
+import Spinner from "../components/Spinner.jsx";
 
 function Home({
   coins,
@@ -41,7 +42,7 @@ function Home({
   return (
     <div>
       <h1>🚀 Crypto Dash</h1>
-      {loading && <p>Loading...</p>}
+      {loading && <Spinner color="white" />}
       {error && <div className="error">{error}</div>}
       <div className="top-controls">
         <FilterInput filter={filter} setFilter={setFilter} />
